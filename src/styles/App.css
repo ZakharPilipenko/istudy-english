@@ -32,7 +32,7 @@
     font-size: 20px;
     line-height: 28px;
     color: #333333;
-    background: url("../assets/img/clouds.svg") no-repeat top 40px center,
+    background: url("/public/assets/img/clouds.svg") no-repeat top 40px center,
       linear-gradient(180deg, #c2e5fe 0%, #ffffff 50%) no-repeat;
   }
   
@@ -88,15 +88,15 @@
   }
   
   .ico-button-cats {
-    background-image: url("../assets/img/icon-cats.svg");
+    background-image: url("/public/assets/img/icon-cats.svg");
   }
   
   .ico-button-cars {
-    background-image: url("../assets/img/icon-cars.svg");
+    background-image: url("/public/assets/img/icon-cars.svg");
   }
   
   .ico-button-flowers {
-    background-image: url("../assets/img/icon-flowers.svg");
+    background-image: url("/public/assets/img/icon-flowers.svg");
   }
   
   .rules {
@@ -162,19 +162,19 @@
   }
   
   .rules-list li:nth-child(1)::before {
-    background-image: url("../assets/img/icon-rules-1.svg");
+    background-image: url("/public/assets/img/icon-rules-1.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
   
   .rules-list li:nth-child(2)::before {
-    background-image: url("../assets/img/icon-rules-2.svg");
+    background-image: url("/public/assets/img/icon-rules-2.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
   
   .rules-list li:nth-child(3)::before {
-    background-image: url("../assets/img/icon-rules-3.svg");
+    background-image: url("/public/assets/img/icon-rules-3.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -235,15 +235,15 @@
   
     perspective: 1000px; /* Для анимации */
   
-    --theme-back: url("../assets/img/back-cats.svg");
+    --theme-back: url("/public/assets/img/back-cats.svg");
   }
   
   .cards-theme-flowers {
-    --theme-back: url("../assets/img/back-flowers.svg");
+    --theme-back: url("/public/assets/img/back-flowers.svg");
   }
   
   .cards-theme-cars {
-    --theme-back: url("../assets/img/back-cars.svg");
+    --theme-back: url("/public/assets/img/back-cars.svg");
   }
   
   .card {
@@ -291,7 +291,7 @@
     height: 144px;
     border-radius: 5px;
     background-color: rgba(140, 174, 200, 0.6);
-    background-image: url("../assets/img/check.svg");
+    background-image: url("/public/assets/img/check.svg");
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
@@ -374,7 +374,7 @@
     left: -30px;
     width: 376px;
     height: 130px;
-    background-image: url("../assets/img/ribbon-with-stars.svg");
+    background-image: url("/public/assets/img/ribbon-with-stars.svg");
     background-position: top center;
     background-repeat: no-repeat;
   }

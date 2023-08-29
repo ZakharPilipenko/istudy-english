@@ -2,42 +2,129 @@ import { RANDOMIZED } from "./settings";
 
 export const cats = [
   {
-    id: "YdAqiUkUoWA",
-    url: "/assets/img/carry.jpg",
+    id: "1",
+    token: "carry",
     audio: "/assets/audio/carry.mp3",
-    description: "носить на руках",
+    url: "/assets/img/word-carry.jpg",
+    type: "word",
   },
   {
-    id: "hX_hf2lPpUU",
-    url: "/assets/img/read.jpg",
+    id: "2",
+    token: "carry",
+    audio: "/assets/audio/carry.mp3",
+    url: "/assets/img/carry.jpg",
+    type: "image",
+  },
+  {
+    id: "3",
+    token: "read",
     audio: "/assets/audio/read.mp3",
-    description: "читать",
+    url: "/assets/img/word-read.jpg",
+    type: "word",
   },
   {
-    id: "w1JE5duY62M",
-    url: "/assets/img/run.jpg",
+    id: "4",
+    token: "read",
+    audio: "/assets/audio/read.mp3",
+    url: "/assets/img/read.jpg",
+    type: "image",
+  },
+  {
+    id: "5",
+    token: "run",
     audio: "/assets/audio/run.mp3",
-    description: "бежать",
+    url: "/assets/img/word-run.jpg",
+    type: "word",
   },
   {
-    id: "3tYZjGSBwbk",
-    url: "/assets/img/say.jpg",
+    id: "6",
+    token: "run",
+    audio: "/assets/audio/run.mp3",
+    url: "/assets/img/run.jpg",
+    type: "image",
+  },
+  {
+    id: "7",
+    token: "say",
     audio: "/assets/audio/say.mp3",
-    description: "сказать",
+    url: "/assets/img/word-say.jpg",
+    type: "word",
   },
   {
-    id: "NoXUQ54pDac",
-    url: "/assets/img/sleep.jpg",
+    id: "8",
+    token: "say",
+    audio: "/assets/audio/say.mp3",
+    url: "/assets/img/say.jpg",
+    type: "image",
+  },
+  {
+    id: "9",
+    token: "sleep",
     audio: "/assets/audio/sleep.mp3",
-    description: "спать",
+    url: "/assets/img/word-sleep.jpg",
+    type: "word",
   },
   {
-    id: "OZhYgZh0bAg",
-    url: "/assets/img/write.jpg",
+    id: "10",
+    token: "sleep",
+    audio: "/assets/audio/sleep.mp3",
+    url: "/assets/img/sleep.jpg",
+    type: "image",
+  },
+  {
+    id: "11",
+    token: "write",
     audio: "/assets/audio/write.mp3",
-    description: "писать",
+    url: "/assets/img/word-write.jpg",
+    type: "word",
+  },
+  {
+    id: "12",
+    token: "write",
+    audio: "/assets/audio/write.mp3",
+    url: "/assets/img/write.jpg",
+    type: "image",
   },
 ];
+
+// export const cats = [
+//   {
+//     id: "YdAqiUkUoWA",
+//     url: "img/carry.jpg",
+//     audio: "audio/carry.mp3",
+//     description: "носить на руках",
+//   },
+//   {
+//     id: "hX_hf2lPpUU",
+//     url: "img/read.jpg",
+//     audio: "audio/read.mp3",
+//     description: "читать",
+//   },
+//   {
+//     id: "w1JE5duY62M",
+//     url: "img/run.jpg",
+//     audio: "audio/run.mp3",
+//     description: "бежать",
+//   },
+//   {
+//     id: "3tYZjGSBwbk",
+//     url: "img/say.jpg",
+//     audio: "audio/say.mp3",
+//     description: "сказать",
+//   },
+//   {
+//     id: "NoXUQ54pDac",
+//     url: "img/sleep.jpg",
+//     audio: "audio/sleep.mp3",
+//     description: "спать",
+//   },
+//   {
+//     id: "OZhYgZh0bAg",
+//     url: "img/write.jpg",
+//     audio: "audio/write.mp3",
+//     description: "писать",
+//   },
+// ];
 
 export const cars = [
   {
@@ -134,7 +221,7 @@ export const getImages = (type) => {
   }));
   // объединим набор с парными карточками
   // создаем новый массив копируя два массива оператором spread
-  const mergedImages = [...imageCollection[type], ...imagePairs];
+  const mergedImages = [...imagePairs];
   // в зависимости от значения параметра в настройках, подготовим массив с парными данными
   // для перетасовывания массива используем прием с сортировкой
   // вместо сравнения фактических значений при сортировке функция вернет случайное число

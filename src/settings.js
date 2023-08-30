@@ -1,7 +1,7 @@
 export const GAME_TYPES = [
-  { type: "cats", text: "Котики" },
-  { type: "flowers", text: "Цветочки" },
-  { type: "cars", text: "Машины" },
+  { type: "cats", text: "Уровень 1" },
+  { type: "flowers", text: "Уровень 2" },
+  { type: "cars", text: "Уровень 3" },
 ];
 
 export const AppRoute = {

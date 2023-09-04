@@ -1,0 +1,480 @@
+:root {
+    --animation-duration: 0.8s;
+  }
+  
+  @font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/Nunito-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/Nunito-Bold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../fonts/Nunito-Black.woff2") format("woff2");
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333333;
+    background: url("/public/assets/img/clouds.svg") no-repeat top 40px center,
+      linear-gradient(180deg, #c2e5fe 0%, #ffffff 50%) no-repeat;
+  }
+  
+  .container {
+    width: 940px;
+    margin: 0 auto;
+  }
+  
+  .button {
+    padding: 16px 24px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    border: none;
+    background-color: #ffbf20;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .button:hover {
+    background-color: #ffd97c;
+  }
+  
+  .button:active {
+    background-color: #ffd97c;
+  }
+  
+  .ico-button {
+    padding: 16px 24px 16px 56px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    border: none;
+    background-color: #ffbf20;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-position: left 24px center;
+    background-repeat: no-repeat;
+  }
+  
+  .ico-button:hover {
+    background-color: #ffd97c;
+  }
+  
+  .ico-button:active {
+    background-color: #ffd97c;
+  }
+  
+  .ico-button-cats {
+    background-image: url("/public/assets/img/icon-cats.svg");
+  }
+  
+  .ico-button-cars {
+    background-image: url("/public/assets/img/icon-cars.svg");
+  }
+  
+  .ico-button-flowers {
+    background-image: url("/public/assets/img/icon-flowers.svg");
+  }
+  
+  .rules {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  
+  .rules h2 {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 56px;
+  }
+  
+  .rules h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .rules p {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  
+  .rules-panel {
+    width: 520px;
+    margin: 36px auto 40px;
+    padding: 24px 32px 36px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(140, 174, 200, 0.25);
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .rules-list {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    list-style: none;
+    text-align: left;
+  }
+  
+  .rules-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .rules-list li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  .rules-list li::before {
+    content: "";
+    width: 40px;
+    height: 36px;
+    flex: none;
+  }
+  
+  .rules-list li:nth-child(1)::before {
+    background-image: url("/public/assets/img/icon-rules-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .rules-list li:nth-child(2)::before {
+    background-image: url("/public/assets/img/icon-rules-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .rules-list li:nth-child(3)::before {
+    background-image: url("/public/assets/img/icon-rules-3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .rules .ico-button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .game {
+    display: grid;
+    grid-template-columns: 460px auto 1fr;
+    align-items: center;
+    gap: 40px 20px;
+    padding-top: 40px;
+    margin-bottom: 155px;
+  }
+  
+  .progress-wrapper {
+    display: flex;
+    width: 460px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .progress {
+    background-color: #00ca51;
+    border-radius: 8px;
+    transition: width var(--animation-duration);
+  }
+  
+  .progress-description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .steps {
+    justify-self: end;
+    padding: 8px 20px;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ffffff;
+    background-color: #00ca51;
+    border-radius: 22px;
+  }
+  
+  .cards {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+    perspective: 1000px; /* Для анимации */
+  
+    --theme-back: url("/public/assets/img/back-cats.svg");
+  }
+  
+  .cards-theme-flowers {
+    --theme-back: url("/public/assets/img/back-flowers.svg");
+  }
+  
+  .cards-theme-cars {
+    --theme-back: url("/public/assets/img/back-cars.svg");
+  }
+  
+  .singleCard {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 220px;
+    height: 160px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #bad6eb;
+    cursor: pointer;
+  
+    transition: transform var(--animation-duration);
+    transform-style: preserve-3d;
+  }
+  
+  .singleCard img {
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 5px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  
+  /* Рубашка */
+  
+  .singleCard::after {
+    grid-area: 1 / 1 / 2 / 2;
+    content: "";
+    width: 218px;
+    height: 158px;
+    background-image: var(--theme-back);  /*url("../img/back-cats.svg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    backface-visibility: hidden;
+  }
+  
+  /* Финальная отметка */
+  
+  .singleCard::before {
+    content: "";
+    grid-area: 1 / 1 / 2 / 2;
+    width: 204px;
+    height: 144px;
+    border-radius: 5px;
+    background-color: rgba(140, 174, 200, 0.6);
+    background-image: url("/public/assets/img/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition-property: opacity;
+    z-index: 1;
+  }
+  
+  .singleCard:not(.singleCard-show):not(.singleCard-finished):hover {
+    box-shadow: 0 6px 16px rgba(140, 174, 200, 0.6);
+  }
+  
+  .singleCard-show {
+    transform: rotateY(180deg);
+    cursor: default;
+  }
+  
+  .singleCard-finished {
+    transform: rotateY(180deg);
+    cursor: default;
+  }
+  
+  .singleCard-finished::before {
+    opacity: 1;
+    transition-delay: var(--animation-duration);
+    transition-duration: var(--animation-duration);
+    transition-timing-function: ease-in-out;
+  }
+  
+  .modalGame {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: rgba(140, 174, 200, 0.8);
+    overflow-y: hidden;
+    overscroll-behavior: contain;
+    pointer-events: auto;
+  
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    animation: fadeIn calc(var(--animation-duration) + 0.1s) calc(2 * var(--animation-duration)) both;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      /* visibility: hidden; */
+      opacity: 0;
+    }
+  
+    to {
+      /* visibility: visible; */
+      opacity: 1;
+    }
+  }
+  
+  .modalGame-box {
+    position: relative;
+    width: 320px;
+    min-height: 285px;
+    max-height: calc(100vh - 60px);
+    padding: 72px 40px 36px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .modalGame-box::before {
+    content: "";
+    position: absolute;
+    top: -75px;
+    left: -30px;
+    width: 376px;
+    height: 130px;
+    background-image: url("/public/assets/img/ribbon-with-stars.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  
+  .modalGame-caption {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .modalGame-description {
+    margin: 0;
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .modalGame .button {
+    width: 100%;
+  }
+  
+  .result {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  
+  .result h2 {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 56px;
+  }
+  
+  .result p {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  
+  .result-table {
+    width: 520px;
+    margin: 36px auto 32px;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(140, 174, 200, 0.25);
+    border-radius: 10px;
+    border-collapse: collapse;
+  }
+  
+  .result-table-row {
+    display: grid;
+    grid-template-columns: 120px 260px 140px;
+    align-items: center;
+  }
+  
+  .result-table-row th {
+    padding: 18px 32px 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8caec8;
+    text-align: left;
+  }
+  
+  .result-table-row td {
+    padding: 8px 32px;
+    text-align: left;
+  }
+  
+  .result-table tbody tr:last-child {
+    padding-bottom: 10px;
+  }
+  
+  .result-table-row.active {
+    font-weight: 900;
+    color: #ffffff;
+    background-color: #00ca51;
+  }
+  
+  .result .button {
+    width: 160px;
+  }
+  
+  /* ---------- моя панель прокрутки ---------- */
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #d1e5ff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(88,78,250,1) 19%, rgba(79,221,250,1) 81%);;
+    border-radius: 10px;
+  }
+
+/* ---------- моя панель прокрутки ---------- */
+

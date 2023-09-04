@@ -1,0 +1,41 @@
+.dropdown {
+    position: relative;
+  }
+
+ .triggerButton {
+    padding: 16px 24px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    border: none;
+    background-color: #ffbf20;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+ } 
+
+ .triggerButton:hover {
+    background-color: #ffd97c;
+  }
+
+
+  .menu {
+    position: absolute;
+    top: -140%;
+    left: 16%;
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 0;
+    
+    border: 1px solid grey;
+    width: 150px;
+    max-height: 200px;
+    min-width: 200px;
+    overflow-y: auto;
+  }
+  .menuitem {
+    margin-bottom: 5px;
+  }
+ 

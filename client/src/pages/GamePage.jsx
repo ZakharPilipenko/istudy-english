@@ -17,7 +17,7 @@ const GamePage = ({cards = [], onShowResults, gameTheme}) => {
          onShowResults(stepsCount);
     };
     return (
-            <section className="game container">
+            <section className="game gameContainer">
               <Progress value={finishedItems.length / 2} max={cards.length / 2} />
               <div className="steps">Шаг {stepsCount}</div>
               <Grid

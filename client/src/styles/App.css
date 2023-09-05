@@ -35,8 +35,32 @@
     background: url("/public/assets/img/clouds.svg") no-repeat top 40px center,
       linear-gradient(180deg, #c2e5fe 0%, #ffffff 50%) no-repeat;
   }
+/* ----- BEEHIVE EFFECT------ */
+  .beeHive{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
   
-  .container {
+  .beeHive img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+
+  }
+
+  
+ 
+  /* ----- BEEHIVE EFFECT------ */
+  
+  .gameContainer {
     width: 940px;
     margin: 0 auto;
   }

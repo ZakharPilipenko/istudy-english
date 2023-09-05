@@ -13,7 +13,7 @@ const Admin = () => {
   const [themeVisible, setThemeVisible] = useState(false);
 
   return (
-    <Container className="d-flex flex-column">
+    <Container className="d-flex flex-column position-relative z-index-10">
       <Button
         variant={"outline-dark"}
         className="mt-2 p-2"

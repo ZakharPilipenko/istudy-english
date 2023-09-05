@@ -8,6 +8,7 @@ import { observer } from "mobx-react-lite";
 import { Context } from "./index.js";
 import { check } from "./http/userAPI";
 import Spinner from "react-bootstrap/Spinner";
+import Bees from "./components/UI/bees/Bees";
 
 const App = observer(() => {
   const { user } = useContext(Context);
@@ -28,6 +29,7 @@ const App = observer(() => {
   return (
     <Router>
       <NavBar />
+      <Bees />
       <AppRouter />
     </Router>
   );

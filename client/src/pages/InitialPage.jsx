@@ -25,7 +25,7 @@ const InitialPage = ({handleStart}) => {
   };
   
     return (
-        <section className="rules container">
+        <section className="rules gameContainer">
           <h2>Добро пожаловать!</h2>
           <p>Memory — игра для тренировки визуальной памяти</p>
           <div className="rules-panel">

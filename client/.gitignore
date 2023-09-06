@@ -12,7 +12,12 @@
 /build
 
 # misc
-
+.DS_Store
+.env
+.env.local
+.env.development.loval
+.env.test.local
+.env.production.local    
 
 npm-debug.log*
 yarn-debug.log*

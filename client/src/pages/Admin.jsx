@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext,  useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import CreateCard from "../components/UI/modals/CreateCard";
@@ -77,7 +77,7 @@ const Admin = () => {
       <div className="lastCard">
         {lastCard() 
         ? 
-        <img src={"http://localhost:5000/" + lastCard()} width="204" height="144" alt=""/>
+        <img src={process.env.REACT_APP_API_URL + lastCard()} width="204" height="144" alt=""/>
         :
         <img src="/assets/img/no-card.jpg" width="204" height="144" alt=""/>
         }

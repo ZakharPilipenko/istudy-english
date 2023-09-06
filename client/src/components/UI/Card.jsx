@@ -10,7 +10,7 @@ const Card = ({item, isVisible, isFinished, onCardClick}) => {
   }`;
 
   const playAudio = (audio) => {
-    const sound = new Audio("http://localhost:5000/" + audio);
+    const sound = new Audio(process.env.REACT_APP_API_URL + audio);
     sound.play();
   }
 
@@ -20,7 +20,7 @@ const Card = ({item, isVisible, isFinished, onCardClick}) => {
   };
     return (
       <li onClick={handleClick} className={`singleCard ${className}`}>
-      <img src={"http://localhost:5000/" + image} width="204" height="144" alt=""/>
+      <img src={process.env.REACT_APP_API_URL + image} width="204" height="144" alt=""/>
       </li>
     );
 }

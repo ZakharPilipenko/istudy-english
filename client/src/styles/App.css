@@ -501,4 +501,28 @@
   }
 
 /* ---------- моя панель прокрутки ---------- */
+.lastCard-heading {
+  font-family: "Nunito";
+  font-weight: 900;
+  align-self: center;
+  margin-top: 20px;
+  font-size: 25px;
+  line-height: 56px;
+}
 
+.lastCard {
+align-self: center;
+align-items: center;
+justify-items: center;
+width: 220px;
+height: 160px;
+background-color: #ffffff;
+border-radius: 10px;
+box-sizing: border-box;
+border: 1px solid #bad6eb;
+cursor: pointer;
+}
+
+.lastCard:hover {
+  box-shadow: 0 6px 16px rgba(140, 174, 200, 0.6);
+}

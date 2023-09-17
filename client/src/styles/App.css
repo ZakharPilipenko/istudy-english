@@ -35,6 +35,13 @@
     background: url("/public/assets/img/clouds.svg") no-repeat top 40px center,
       linear-gradient(180deg, #c2e5fe 0%, #ffffff 50%) no-repeat;
   }
+
+  @media (max-width: 768px) {
+    body  {
+      background-size: contain;
+    }
+  }
+  
 /* ----- BEEHIVE EFFECT------ */
   .beeHive{
     position: absolute;
@@ -219,6 +226,27 @@
     padding-top: 40px;
     margin-bottom: 155px;
   }
+
+  @media (max-width: 820px) {
+    .game {
+      grid-template-columns: 360px 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .game {
+      grid-template-columns: 180px auto auto;
+    }
+  }
+
+  @media (max-width: 321px) {
+    .game {
+      grid-template-columns: 180px auto auto;
+    }
+  }
+
+
+
   
   .progress-wrapper {
     display: flex;
@@ -228,11 +256,18 @@
     background-color: #ffffff;
     border-radius: 8px;
   }
+
   
   .progress {
     background-color: #00ca51;
     border-radius: 8px;
     transition: width var(--animation-duration);
+  }
+
+  @media (max-width: 768px) {
+    .progress-wrapper {
+      max-width: 230px;
+    }
   }
   
   .progress-description {
@@ -251,12 +286,31 @@
     background-color: #00ca51;
     border-radius: 22px;
   }
+
+  @media (max-width: 820px) {
+    .steps {
+      margin-right: 100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .steps {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 321px) {
+    .steps {
+      margin-right: 0;
+    }
+  }
+
   
   .cards {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(4, 220px);
-    gap: 20px;
+    grid-template-columns: repeat(4, 220px);/* 220px / 16px = 13.75rem */
+    gap: 20px;/* 20px / 16px = 1.25rem */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -265,6 +319,29 @@
   
     --theme-back: url("/public/assets/img/back-cats.svg");
   }
+
+  @media (max-width: 820px) {
+    .cards {
+      grid-template-columns: repeat(3, 220px); 
+      gap: 10px; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(3, 110px); 
+      gap: 10px; 
+    }
+  }
+
+  @media (max-width: 321px) {
+    .cards {
+      grid-template-columns: repeat(2, 110px); 
+      gap: 10px; 
+    }
+  }
+
+
   
   .cards-theme-flowers {
     --theme-back: url("/public/assets/img/back-flowers.svg");
@@ -278,16 +355,25 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    width: 220px;
-    height: 160px;
+    width: 220px;/* 220px / 16px = 13.75rem */
+    height: 160px;/* 160px / 16px = 10rem */
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 10px;/* 10px / 16px = 0.625rem */
     box-sizing: border-box;
-    border: 1px solid #bad6eb;
+    border: 1px solid #bad6eb;/* 1px / 16px = 0.0625rem */
     cursor: pointer;
   
     transition: transform var(--animation-duration);
     transform-style: preserve-3d;
+  }
+
+  @media (max-width: 768px) {
+    .singleCard  {
+      width: 110px;/* 220px / 16px = 13.75rem */
+      height: 80px;/* 160px / 16px = 10rem */
+      border-radius: 0.625rem;
+      border: 0.0625rem solid #bad6eb;
+    }
   }
   
   .singleCard img {
@@ -295,6 +381,13 @@
     border-radius: 5px;
     transform: rotateY(180deg);
     backface-visibility: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .singleCard img {
+      width: 102px;
+      height: 72px;
+    }
   }
   
   /* Рубашка */
@@ -308,6 +401,14 @@
     background-repeat: no-repeat;
     background-position: center;
     backface-visibility: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .singleCard::after {
+      width: 109px;
+      height: 79px;
+      background-size: cover;
+    }
   }
   
   /* Финальная отметка */
@@ -325,6 +426,13 @@
     opacity: 0;
     transition-property: opacity;
     z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .singleCard::before {
+      width: 102px;
+      height: 72px;
+    }
   }
   
   .singleCard:not(.singleCard-show):not(.singleCard-finished):hover {
@@ -426,6 +534,8 @@
   }
   
   .result {
+    position: relative;
+    z-index: 10;
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
@@ -454,11 +564,47 @@
     border-radius: 10px;
     border-collapse: collapse;
   }
+
+  @media (max-width: 820px) {
+    .result-table {
+      width: 520px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .result-table {
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 321px) {
+    .result-table {
+      width: 300px;
+    }
+  }
   
   .result-table-row {
     display: grid;
     grid-template-columns: 120px 260px 140px;
     align-items: center;
+  }
+
+  @media (max-width: 820px) {
+    .result-table-row  {
+      grid-template-columns: 1fr 1fr  1fr ;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .result-table-row  {
+      grid-template-columns: 1fr  1fr  1fr ;
+    }
+  }
+
+  @media (max-width: 321px) {
+    .result-table-row  {
+      grid-template-columns: 1fr  1fr  1fr ;
+    }
   }
   
   .result-table-row th {
